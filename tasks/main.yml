@@ -6,7 +6,7 @@
   file: >
     owner=root
     group=root
-    mode='go-w'
+    mode=755
     path='/opt/{{ terraform_name }}'
     state=directory
 

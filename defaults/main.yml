@@ -1,3 +1,4 @@
 ---
-terraform_ver : '0.6.3'
+terraform_ver : '0.6.6'
 terraform_platform : 'linux_amd64'
+terraform_mirror : 'https://dl.bintray.com/mitchellh/terraform'
