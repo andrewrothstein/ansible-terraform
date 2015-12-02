@@ -1,4 +1,6 @@
 ---
 terraform_name : 'terraform_{{ terraform_ver }}'
 terraform_zip : '{{ terraform_name }}_{{ terraform_platform }}.zip'
-terraform_url : '{{terraform_mirror}}/{{ terraform_zip }}'
+
+# https://releases.hashicorp.com/terraform/0.6.7/terraform_0.6.7_linux_amd64.zip
+terraform_url : '{{terraform_mirror}}/{{terraform_ver}}/{{ terraform_zip }}'
