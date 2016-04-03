@@ -1,4 +1,4 @@
 ---
-terraform_ver : '0.6.13'
+terraform_ver : '0.6.14'
 terraform_platform : 'linux_amd64'
 terraform_mirror : 'https://releases.hashicorp.com/terraform'
