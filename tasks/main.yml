@@ -12,19 +12,19 @@
     owner=root
     group=root
     mode=755
-    path=/opt/{{terraform_name}}
+    path={{terraform_install_dir}}/{{terraform_name}}
     state=directory
   
 - name: unarchive terraform...
   unarchive: >
     copy=no
     src=/tmp/{{terraform_zip}}
-    dest=/opt/{{terraform_name}}
+    dest={{terraform_install_dir}}/{{terraform_name}}
 
 - name: link /opt/terraform
   file: >
-    src=/opt/{{terraform_name}}
-    dest=/opt/terraform
+    src={{terraform_install_dir}}/{{terraform_name}}
+    dest={{terraform_install_dir}}/terraform
     state=link
     owner=root
     group=root
