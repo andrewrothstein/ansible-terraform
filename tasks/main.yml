@@ -1,38 +1,33 @@
 ---
 - name: download terraform...
+  become: yes
+  become_user: root
   get_url: >
     url={{terraform_url}}
     dest=/tmp/{{terraform_zip}}
-    owner=root
-    group=root
-    mode=644
+    mode=0644
 
 - name: create /opt/terraform_version
+  become: yes
+  become_user: root
   file: >
-    owner=root
-    group=root
-    mode=755
     path={{terraform_install_dir}}/{{terraform_name}}
     state=directory
+    mode=0755
   
 - name: unarchive terraform...
+  become: yes
+  become_user: root
   unarchive: >
     copy=no
     src=/tmp/{{terraform_zip}}
     dest={{terraform_install_dir}}/{{terraform_name}}
+    creates={{terraform_install_dir}}/{{terraform_name}}/terraform
 
-- name: link /opt/terraform
+- name: link terraform
+  become: yes
+  become_user: root
   file: >
-    src={{terraform_install_dir}}/{{terraform_name}}
-    dest={{terraform_install_dir}}/terraform
+    src={{terraform_install_dir}}/{{terraform_name}}/terraform
+    dest={{terraform_install_dir}}/bin/terraform
     state=link
-    owner=root
-    group=root
-
-- name: include terraform-* in the default path...
-  copy: >
-    src=etc/profile.d/terraform.sh
-    dest=/etc/profile.d/terraform.sh
-    mode=644
-    owner=root
-    group=root
