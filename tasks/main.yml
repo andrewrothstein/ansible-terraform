@@ -7,7 +7,7 @@
     dest=/tmp/{{terraform_zip}}
     mode=0644
 
-- name: create /opt/terraform_version
+- name: create directory for terraform
   become: yes
   become_user: root
   file: >
@@ -29,5 +29,5 @@
   become_user: root
   file: >
     src={{terraform_install_dir}}/{{terraform_name}}/terraform
-    dest={{terraform_install_dir}}/bin/terraform
+    dest={{terraform_install_dir}}/terraform
     state=link
