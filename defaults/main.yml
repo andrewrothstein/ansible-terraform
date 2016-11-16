@@ -1,5 +1,5 @@
 ---
-terraform_ver : '0.7.10'
+terraform_ver : '0.7.11'
 terraform_platform : linux_amd64
 terraform_mirror : https://releases.hashicorp.com/terraform
 terraform_install_dir : /usr/local/bin
