@@ -5,6 +5,7 @@
   get_url: >
     url={{terraform_url}}
     dest=/tmp/{{terraform_zip}}
+    checksum={{terraform_checksum}}
     mode=0644
 
 - name: create directory for terraform

@@ -2,4 +2,5 @@
 terraform_ver : '0.7.13'
 terraform_platform : linux_amd64
 terraform_mirror : https://releases.hashicorp.com/terraform
+terraform_checksum: sha256:5a4f762a194542d38406b9b92c722b57f7910344db084e24c9c43d7719f4aa18
 terraform_install_dir : /usr/local/bin
