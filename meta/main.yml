@@ -9,18 +9,20 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-        - 7
+        - all
     - name: Fedora
       versions:
-        - 23
+        - all
     - name: Ubuntu
       versions:
-        - xenial
+        - all
 
   galaxy_tags:
-    - development
+    - terraform
+    - cloud
+    - infrastructure
 
 dependencies:
   - role: andrewrothstein.unarchive-deps
-    version: v1.0.3
+    version: v1.0.4
   
