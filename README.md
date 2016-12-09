@@ -21,9 +21,11 @@ See [meta/main.yml]
 Example Playbook
 ----------------
 
-    - hosts: servers
-      roles:
-         - andrewrothstein.terraform
+```yml
+- hosts: servers
+  roles:
+    - andrewrothstein.terraform
+```
 
 License
 -------
@@ -33,4 +35,4 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein andrew.rothstein@gmail.com
+Andrew Rothstein <andrew.rothstein@gmail.com>
