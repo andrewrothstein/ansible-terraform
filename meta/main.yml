@@ -28,4 +28,3 @@ galaxy_info:
 dependencies:
   - role: andrewrothstein.unarchive-deps
     version: v1.0.5
-  
