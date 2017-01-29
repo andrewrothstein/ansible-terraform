@@ -1,7 +1,7 @@
 ---
-terraform_ver : '0.8.4'
+terraform_ver : '0.8.5'
 terraform_platform : linux_amd64
 terraform_mirror : https://releases.hashicorp.com/terraform
-# https://releases.hashicorp.com/terraform/0.8.4/terraform_0.8.4_SHA256SUMS
-terraform_checksum: sha256:297d35d0b4311445cd87ef032d3dec917bcc7a8b163ead28a4c45d966a2f75cc
+# https://releases.hashicorp.com/terraform/0.8.5/terraform_0.8.5_SHA256SUMS
+terraform_checksum: sha256:4b4324e354c26257f0b830eacb0e7cc7e2ced017d78855f74cb9377f1abf1dd7
 terraform_install_dir : /usr/local/bin
