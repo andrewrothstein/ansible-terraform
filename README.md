@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-terraform.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-terraform)
 andrewrothstein.terraform
 ===========================
 
