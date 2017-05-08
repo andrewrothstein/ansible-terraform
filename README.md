@@ -1,8 +1,8 @@
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-terraform.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-terraform)
 andrewrothstein.terraform
 ===========================
+[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-terraform.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-terraform)
 
-installs [Terraform](https://www.terraform.io/)
+Installs [Terraform](https://www.terraform.io/)
 
 Requirements
 ------------
