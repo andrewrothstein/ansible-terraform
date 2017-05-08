@@ -1,22 +1,21 @@
 ---
-terraform_ver : '0.9.3'
+terraform_ver : '0.9.4'
 terraform_platform : linux_amd64
 terraform_mirror : https://releases.hashicorp.com/terraform
 
 terraform_install_dir : /usr/local/bin
 
-# https://releases.hashicorp.com/terraform/0.9.3/terraform_0.9.3_SHA256SUMS
+# https://releases.hashicorp.com/terraform/0.9.4/terraform_0.9.4_SHA256SUMS
 terraform_checksums:
-  darwin_amd64: sha256:180afdeb14f4049f3374fe02b9143ad428ebd31dd89c6595775d7ba439d7fbf0
-  freebsd_386: sha256:733aa19cb6a257bd35dfeb7b79520cfd261d88b022089a02035d3e7f3efca095
-  freebsd_amd64: sha256:8a8ea146c973a2d254f90cb92f0a79c5d41d1c8f974d7eb20599f293e53caae3
-  freebsd_arm: sha256:2d3d56064281063ba08d7440ce92157d0b8d817013579cb587e6aa71260c94ed
-  linux_386: sha256:05285a7c1d2ca329632eff5e4d853ff4a0a21dde0e940e0fc885a8acb659f4f3
-  linux_amd64: sha256:f34b96f7b7edaf8c4dc65f6164ba0b8f21195f5cbe5b7288ad994aa9794bb607
-  linux_arm: sha256:69b59f4d03e20b90b77822e011bd42e38c3a23ddcaacd9837e81fa3a8c9f7e57
-  openbsd_386: sha256:ec9a06458672ad7f0223d9ac0af991d6d39b331ce2b66a17995e43da43592015
-  openbsd_amd64: sha256:2a849ea234e560044ded088312d6a49a3cb802348af8c12751b8262cc585a802
-  solaris_amd64: sha256:499a9c1f7c4b2ce4e104dfe76ebdc6013752c7d7edf8032d5c2f3ea667977365
-  windows_386: sha256:2af313c55c72fa10c1536dfb62895bc8a9351c383ceb24cd6f4565737d03bc83
-  windows_amd64: sha256:27a67d3127d762a95024b354a96f36650c340e837566bd296c7ec3ecc15be94a
-
+  darwin_amd64: sha256:73ec3c66a77e0c0879e6397fe2b4c4910b24464971fd0c27795b0fa09143f9ad
+  freebsd_386: sha256:c1ae0f9333ad8586add3cad8a16b4f88a13a09994564043742d5da1dc5601441
+  freebsd_amd64: sha256:cbcb8b7e48e5657624def1d397d16b3c4a28a8c64345b7c2e218a7d5b7e47d76
+  freebsd_arm: sha256:fbb356dded39a48009a6dcab46617bfde75ddc43a22ac75f2a4706fda631a8b0
+  linux_386: sha256:1e589601c5bc50d283afbee78d47af0cc1966445a45ff178cd1ef25aac210752
+  linux_amd64: sha256:cc1cffee3b82820b7f049bb290b841762ee920aef3cf4d95382cc7ea01135707
+  linux_arm: sha256:705d13707387864a93e1528658c3affea020cb751b08549b8b35b4772d2a5326
+  openbsd_386: sha256:74150634c3eb7ada34605da6315f12d83b5a304805d67c1e06e9c6f7c60a9417
+  openbsd_amd64: sha256:48d95958c22fceeb8b836f254bb2af0785bcab639a990339fd54cefa9a5ded6a
+  solaris_amd64: sha256:625203ac3d89965f7240c8a8a9d83ed471abe3c6019ffc3ec3a2fd2f5bddbbf8
+  windows_386: sha256:e5a7c38c9ce64458bd7cd0c258bc00df83921ece30f668e135d2bfc051aec642
+  windows_amd64: sha256:d7c220da2f0b9a52d686cbb7278d27fba3af8dd02d785dfe33c4c6e96df27100
