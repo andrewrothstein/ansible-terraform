@@ -2,33 +2,33 @@
 - name: download terraform...
   become: yes
   become_user: root
-  get_url: >
-    url={{terraform_url}}
-    dest=/tmp/{{terraform_zip}}
-    checksum={{terraform_checksum}}
-    mode=0644
+  get_url:
+    url: '{{terraform_url}}'
+    dest: /tmp/{{terraform_zip}}
+    checksum: '{{terraform_checksum}}'
+    mode: 0644
 
 - name: create directory for terraform
   become: yes
   become_user: root
-  file: >
-    path={{terraform_install_dir}}/{{terraform_name}}
-    state=directory
-    mode=0755
+  file:
+    path: '{{terraform_install_dir}}/{{terraform_name}}'
+    state: directory
+    mode: 0755
   
 - name: unarchive terraform...
   become: yes
   become_user: root
-  unarchive: >
-    copy=no
-    src=/tmp/{{terraform_zip}}
-    dest={{terraform_install_dir}}/{{terraform_name}}
-    creates={{terraform_install_dir}}/{{terraform_name}}/terraform
+  unarchive:
+    copy: no
+    src: /tmp/{{terraform_zip}}
+    dest: '{{terraform_install_dir}}/{{terraform_name}}'
+    creates: '{{terraform_install_dir}}/{{terraform_name}}/terraform'
 
 - name: link terraform
   become: yes
   become_user: root
-  file: >
-    src={{terraform_install_dir}}/{{terraform_name}}/terraform
-    dest={{terraform_install_dir}}/terraform
-    state=link
+  file:
+    src: '{{terraform_install_dir}}/{{terraform_name}}/terraform'
+    dest: '{{terraform_install_dir}}/terraform'
+    state: link
