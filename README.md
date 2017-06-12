@@ -1,6 +1,6 @@
 andrewrothstein.terraform
 ===========================
-[![CircleCI](https://circleci.com/gh/andrewrothstein/ansible-terraform.svg?style=svg)](https://circleci.com/gh/andrewrothstein/ansible-terraform)
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-terraform.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-terraform)
 
 Installs [Terraform](https://www.terraform.io/)
 
