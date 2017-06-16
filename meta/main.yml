@@ -29,5 +29,5 @@ galaxy_info:
     - infrastructure
 
 dependencies:
-  - role: andrewrothstein.unarchive-deps
-    version: v1.0.5
+  - src: andrewrothstein.unarchive-deps
+    version: v1.0.8
