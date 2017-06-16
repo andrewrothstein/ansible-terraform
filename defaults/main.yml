@@ -19,3 +19,5 @@ terraform_checksums:
   solaris_amd64: sha256:cc0ee5904dbbee2b1a2e696add59e8d777c173936d3244f156456cb8c5aadd81
   windows_386: sha256:2e2701ac76c07b08d051b4b4557ff2a2c7d5d4b72415afa4cc99f356358df019
   windows_amd64: sha256:1b1632d2f574d3f6033fbfabacc4cef16973c5e32585820c70f9a2e42e526b4a
+
+terraform_cleanup: True

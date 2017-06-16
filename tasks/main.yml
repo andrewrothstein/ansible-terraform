@@ -32,3 +32,11 @@
     src: '{{terraform_install_dir}}/{{terraform_name}}/terraform'
     dest: '{{terraform_install_dir}}/terraform'
     state: link
+
+- name: cleanup...
+  become: yes
+  become_user: root
+  when: terraform_cleanup
+  file:
+    path: /tmp/{{terraform_zip}}
+    state: absent
