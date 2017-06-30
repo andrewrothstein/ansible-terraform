@@ -15,7 +15,7 @@
     path: '{{terraform_install_dir}}/{{terraform_name}}'
     state: directory
     mode: 0755
-  
+
 - name: unarchive terraform...
   become: yes
   become_user: root
