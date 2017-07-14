@@ -20,7 +20,7 @@
   become: yes
   become_user: root
   unarchive:
-    copy: no
+    remote_src: no
     src: /tmp/{{terraform_zip}}
     dest: '{{terraform_install_dir}}/{{terraform_name}}'
     creates: '{{terraform_install_dir}}/{{terraform_name}}/terraform'
