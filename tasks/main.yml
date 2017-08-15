@@ -8,11 +8,24 @@
     checksum: '{{terraform_checksum}}'
     mode: 0644
 
-- name: create directory for terraform
+- name: download terraform plugins...
   become: yes
   become_user: root
+  with_items: '{{terraform_providers}}'
+  get_url:
+    url: '{{item.mirror|default("https://releases.hashicorp.com")}}/terraform-provider-{{item.provider}}/{{item.version}}/terraform-provider-{{item.provider}}_{{item.version}}_{{terraform_platform}}.zip'
+    dest: /tmp/terraform-provider-{{item.provider}}_{{item.version}}.zip
+    checksum: '{{item.checksums[terraform_platform]}}'
+    mode: 0644
+
+- name: create directories for terraform
+  become: yes
+  become_user: root
+  with_items:
+    - '{{terraform_install_dir}}/{{terraform_name}}'
+    - '{{terraform_providers_dir}}'
   file:
-    path: '{{terraform_install_dir}}/{{terraform_name}}'
+    path: '{{item}}'
     state: directory
     mode: 0755
 
@@ -25,6 +38,15 @@
     dest: '{{terraform_install_dir}}/{{terraform_name}}'
     creates: '{{terraform_install_dir}}/{{terraform_name}}/terraform'
 
+- name: unarchive plugins
+  become: yes
+  become_user: root
+  with_items: '{{terraform_providers}}'
+  unarchive:
+    remote_src: yes
+    src: /tmp/terraform-provider-{{item.provider}}_{{item.version}}.zip
+    dest: '{{terraform_providers_dir}}'
+    
 - name: link terraform
   become: yes
   become_user: root
