@@ -11,7 +11,7 @@
 - name: download terraform plugins...
   become: yes
   become_user: root
-  with_items: '{{terraform_providers}}'
+  with_items: '{{terraform_providers|default([])}}'
   get_url:
     url: '{{item.mirror|default("https://releases.hashicorp.com")}}/terraform-provider-{{item.provider}}/{{item.version}}/terraform-provider-{{item.provider}}_{{item.version}}_{{terraform_platform}}.zip'
     dest: /tmp/terraform-provider-{{item.provider}}_{{item.version}}.zip
@@ -41,7 +41,7 @@
 - name: unarchive plugins
   become: yes
   become_user: root
-  with_items: '{{terraform_providers}}'
+  with_items: '{{terraform_providers|default([])}}'
   unarchive:
     remote_src: yes
     src: /tmp/terraform-provider-{{item.provider}}_{{item.version}}.zip
