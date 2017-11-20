@@ -46,6 +46,7 @@
     remote_src: yes
     src: /tmp/terraform-provider-{{item.provider}}_{{item.version}}.zip
     dest: '{{terraform_providers_dir}}'
+    creates: '{{terraform_providers_dir}}/terraform-provider-{{item.provider}}_{{item.version}}_{{item.binary_ver}}'
     
 - name: link terraform
   become: yes

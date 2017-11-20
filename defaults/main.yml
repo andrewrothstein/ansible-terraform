@@ -1,42 +1,43 @@
 ---
-terraform_ver : '0.10.7'
+terraform_ver : '0.11.0'
 terraform_platform : linux_amd64
 terraform_mirror : https://releases.hashicorp.com/terraform
 
 terraform_install_dir : /usr/local/bin
 terraform_providers_dir: /usr/local/terraform-providers
 
-# https://releases.hashicorp.com/terraform/0.10.7/terraform_0.10.7_SHA256SUMS
+# https://releases.hashicorp.com/terraform/0.11.0/terraform_0.11.0_SHA256SUMS
 terraform_checksums:
-  darwin_amd64: sha256:60924d17e40be4b055629719a1f633736cca70c4506b8f7e32fa17e0d6e57477
-  freebsd_386: sha256:5462fae3b795ed4a6420705daa56cdf4c437aeb4a5e61ecc94285ab0c6d66ca5
-  freebsd_amd64: sha256:4e3e1bcfc271180c79232cb9a06fc958d6ae631041b5afebdb9017e18c79e307
-  freebsd_arm: sha256:343dc6e85e80c0454076ad20ce3846862780b66542c4e76a767e02d4e9cfc883
-  linux_386: sha256:423d905a67f1d867a0626e720d33a75d17aeb8e6eac20e4d7e2ca5ccec8e48ce
-  linux_amd64: sha256:8fb5f587fcf67fd31d547ec53c31180e6ab9972e195905881d3dddb8038c5a37
-  linux_arm: sha256:68c0a94e23150fa0dffc4826983f06c4dfde86c2142393e8f6b2cee1bcac34a0
-  openbsd_386: sha256:de2dd10e2adacf3a2d5010487e773fceb7df025551393876099d114adfeba516
-  openbsd_amd64: sha256:2e100a3da07f658e6d22fcb2ae478bdb336388b2b4e302a083056284ca3364c9
-  solaris_amd64: sha256:bf10b3146e376ad112b5914028a8364374b301dc04d1e4320498925065a09b22
-  windows_386: sha256:9c7d40a3a30c3bd611fd8dd72b2aac4c0e83be898dc097cb2e7ed7a5721736c3
-  windows_amd64: sha256:872fa58641020c242a579587838bb0842361e1daf0ae1f97fc3e9bab9a4d63af
+  darwin_amd64: sha256:0d5f7ffcfd34fe58ed25fe48650f1c9ac1d9e15983af43deaeffc6d0a88ba346
+  freebsd_386: sha256:94f8d88149f577c45ba763f1f975e417b5476ac8946b6ecc62535a9eaf4667ae
+  freebsd_amd64: sha256:fb868eaf385e683a4fb6dd0c9a3a377df4607df1b684f2d37d45062ce91308de
+  freebsd_arm: sha256:6ffc07d24f098b93689ea14e18ee07625ef2ab7ceff422f14996c723ba3dc84f
+  linux_386: sha256:c44a1fd6d13148db2a51cf682cf7362f41f9cd1c524f0b8511922556077e3f6f
+  linux_amd64: sha256:402b4333792967986383670134bb52a8948115f83ab6bda35f57fa2c3c9e9279
+  linux_arm: sha256:26fbb7318aea085f0400b987980b40f1a5b11a1c79206eb96d40e07d966d4ea7
+  openbsd_386: sha256:533309cfae42625e1ed87f06ca31e9dd76c869652240414d45bb826aff19f211
+  openbsd_amd64: sha256:a199aa3830910fbdd0ef10eafd782eec055daaad94d100946be808535c5d2071
+  solaris_amd64: sha256:6707ebc0b1b55167dffe1925aab702802d686b6f3a9aec6ae7b6bff143a00201
+  windows_386: sha256:3081a94822c7d088575c75dc0c4be2543301c4834d8da731bd53171e082a6d86
+  windows_amd64: sha256:a958adf0c4177ecccfdc34df626e752027b52278f04fd527244f46ef220a54d5
 
-# https://releases.hashicorp.com/terraform-provider-aws/0.1.4/terraform-provider-aws_0.1.4_SHA256SUMS
+# https://releases.hashicorp.com/terraform-provider-aws/1.3.0/terraform-provider-aws_1.3.0_SHA256SUMS
 #terraform_providers:
 #  - provider: aws
-#    version: '0.1.4'
+#    version: '1.3.0'
+#    binary_ver: x4
 #    checksums:
-#      darwin_amd64: sha256:4cd53a85aa2a109c7b1e14d32466e23f4ecf65387a645abae7c8da07eb346341
-#      freebsd_386: sha256:26b59f0fe278056b18203ad5f041473c22394687b3b455c20e86fe3d6d12247a
-#      freebsd_amd64: sha256:e8e2e8e08d88ce153ed1c23d7d7671d72f0722fefab332f95557f888ec8bb780
-#      freebsd_arm: sha256:d2e6f0d4d818c054ec6e3b1ae7bfa6135162319bdaddfa667eacb0afe1c93023
-#      linux_386: sha256:8679172dc4055979988fb7a8af4510bc249388c9e3451b544089aebda2b2505a
-#      linux_amd64: sha256:530c25b88b2cf4c4c4e0b63b91fadd604e89ce58e6e780ea5f011cca029c5611
-#      linux_arm: sha256:53ef7dffc08c4fd69127d245cdddd8b4418e03fe1c0269a827b06b62682ef432
-#      openbsd_386: sha256:c6e4dea2ca037084821bbe38ef06d98e04af0cda263a6026b1dc760f94239df7
-#      openbsd_amd64: sha256:d878aa0bdcc64bf64d320ce2b405687b73c7c8d76a5c8d076ac44eea516e6f28
-#      solaris_amd64: sha256:59db8c9d3ef9256220931e59aec49f32d2648200c45d2bd47e46e3c6b26b9cdf
-#      windows_386: sha256:b7e7c17f49bd68013eb92b68e11f6cbc97aee62c6ef4eb9a4f9c7e53fb6210cf
-#      windows_amd64: sha256:0987a4354fca141a53f7c1ab4c4fbc736d2a55c2d951654ed46ad72aaf3cf643
+#      darwin_amd64: sha256:b34dfda2d4123e9e2781afd7b581aba635af6510a93c59a3bde90de23c06599b
+#      freebsd_386: sha256:9443837651a5d80a84e1c20655a020d90757d4e27fed71690d6146a35621badb
+#      freebsd_amd64: sha256:6fb992a921b92f3282af9e479e0fec811fe053fb0b8495384f3a8ca5f03fa418
+#      freebsd_arm: sha256:571eeed69a7e9854269b0e53fe50aa2b4654378adae5305377a9566f8bd830a8
+#      linux_386: sha256:c34ed2f7b2b6e3ec4ceba08f89117fdaa2491e682ddeb7c9244f5244d4456d06
+#      linux_amd64: sha256:5e3185679c325164424d52939011650cd5559d861b22c8742d8c7880e6735cdd
+#      linux_arm: sha256:a003f680e1f899b199e9abb84eaebe52340746711004322073c1f3491b3f2185
+#      openbsd_386: sha256:ad8240a0e8ae371386a073c6c88a4df54d1a493197a5f8ca57ec285467b241a5
+#      openbsd_amd64: sha256:3887d8e60d567d1acd75012f062907d34eaae8cb68336c0eefe332cb8174b40c
+#      solaris_amd64: sha256:8418e0a0d2aea003f35785df796bc3a262e2ffbb80fae75506700faf513ef99b
+#      windows_386: sha256:87c46cd959732343d2f16becb4e49e9a4d3a1a47708d0e78faacd4d77273db34
+#      windows_amd64: sha256:b7fdfa2083c49497cd692bece5c240131833d0d0f5011366e7986cd29d5ea559
   
 terraform_cleanup: True
