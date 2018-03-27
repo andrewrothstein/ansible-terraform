@@ -1,65 +1,47 @@
 ---
-- name: download terraform...
+- name: check for installation
   become: yes
-  become_user: root
-  get_url:
-    url: '{{terraform_url}}'
-    dest: /tmp/{{terraform_zip}}
-    checksum: '{{terraform_checksum}}'
-    mode: 0644
-
-- name: download terraform plugins...
-  become: yes
-  become_user: root
-  with_items: '{{terraform_providers|default([])}}'
-  get_url:
-    url: '{{item.mirror|default("https://releases.hashicorp.com")}}/terraform-provider-{{item.provider}}/{{item.version}}/terraform-provider-{{item.provider}}_{{item.version}}_{{terraform_platform}}.zip'
-    dest: /tmp/terraform-provider-{{item.provider}}_{{item.version}}.zip
-    checksum: '{{item.checksums[terraform_platform]}}'
-    mode: 0644
-
-- name: create directories for terraform
-  become: yes
-  become_user: root
-  with_items:
-    - '{{terraform_install_dir}}/{{terraform_name}}'
-    - '{{terraform_providers_dir}}'
-  file:
-    path: '{{item}}'
-    state: directory
-    mode: 0755
-
-- name: unarchive terraform...
-  become: yes
-  become_user: root
-  unarchive:
-    remote_src: yes
-    src: /tmp/{{terraform_zip}}
-    dest: '{{terraform_install_dir}}/{{terraform_name}}'
-    creates: '{{terraform_install_dir}}/{{terraform_name}}/terraform'
-
-- name: unarchive plugins
-  become: yes
-  become_user: root
-  with_items: '{{terraform_providers|default([])}}'
-  unarchive:
-    remote_src: yes
-    src: /tmp/terraform-provider-{{item.provider}}_{{item.version}}.zip
-    dest: '{{terraform_providers_dir}}'
-    creates: '{{terraform_providers_dir}}/terraform-provider-{{item.provider}}_{{item.version}}_{{item.binary_ver}}'
-    
+  stat:
+    path: '{{terraform_binary_dir}}'
+  changed_when: False
+  register: terraform_binary
+- when: not terraform_binary.stat.exists
+  block:
+    - name: download terraform...
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{terraform_url}}'
+        dest: /tmp/{{terraform_zip}}
+        checksum: '{{terraform_checksum}}'
+        mode: 0644
+    - name: create directory for terraform
+      become: yes
+      become_user: root
+      file:
+        path: '{{terraform_binary_dir}}'
+        state: directory
+        mode: 0755
+    - name: unarchive terraform...
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{terraform_zip}}
+        dest: '{{terraform_binary_dir}}'
+        creates: '{{terraform_binary_dir}}/terraform'
+  always:
+    - name: cleanup...
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{terraform_zip}}
+        state: absent
 - name: link terraform
   become: yes
   become_user: root
   file:
-    src: '{{terraform_install_dir}}/{{terraform_name}}/terraform'
+    src: '{{terraform_binary_dir}}/terraform'
     dest: '{{terraform_install_dir}}/terraform'
     state: link
 
-- name: cleanup...
-  become: yes
-  become_user: root
-  when: terraform_cleanup
-  file:
-    path: /tmp/{{terraform_zip}}
-    state: absent
