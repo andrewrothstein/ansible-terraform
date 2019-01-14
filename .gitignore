@@ -3,3 +3,4 @@
 .ansible-roles
 Dockerfile.*
 requirements.yml
+**.swp

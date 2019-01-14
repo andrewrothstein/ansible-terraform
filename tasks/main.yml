@@ -2,7 +2,7 @@
 - name: check for installation
   become: yes
   stat:
-    path: '{{terraform_binary_dir}}'
+    path: '{{ terraform_binary_dir }}'
   changed_when: False
   register: terraform_binary
 - when: not terraform_binary.stat.exists
@@ -11,15 +11,15 @@
       become: yes
       become_user: root
       get_url:
-        url: '{{terraform_url}}'
-        dest: /tmp/{{terraform_zip}}
-        checksum: '{{terraform_checksum}}'
+        url: '{{ terraform_url }}'
+        dest: /tmp/{{ terraform_zip }}
+        checksum: '{{ terraform_checksum }}'
         mode: 0644
     - name: create directory for terraform
       become: yes
       become_user: root
       file:
-        path: '{{terraform_binary_dir}}'
+        path: '{{ terraform_binary_dir }}'
         state: directory
         mode: 0755
     - name: unarchive terraform...
@@ -27,21 +27,21 @@
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{terraform_zip}}
-        dest: '{{terraform_binary_dir}}'
-        creates: '{{terraform_binary_dir}}/terraform'
+        src: /tmp/{{ terraform_zip }}
+        dest: '{{ terraform_binary_dir }}'
+        creates: '{{ terraform_binary_dir }}/terraform'
   always:
     - name: cleanup...
       become: yes
       become_user: root
       file:
-        path: /tmp/{{terraform_zip}}
+        path: /tmp/{{ terraform_zip }}
         state: absent
 - name: link terraform
   become: yes
   become_user: root
   file:
-    src: '{{terraform_binary_dir}}/terraform'
-    dest: '{{terraform_install_dir}}/terraform'
+    src: '{{ terraform_binary_dir }}/terraform'
+    dest: '{{ terraform_install_dir }}/terraform'
     state: link
-    force: '{{terraform_force_install}}'
+    force: '{{ terraform_force_install }}'
