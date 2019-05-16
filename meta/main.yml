@@ -1,33 +1,30 @@
----
+dependencies:
+- role: andrewrothstein.unarchive-deps
+  version: v1.0.12
 galaxy_info:
   author: Andrew Rothstein
-  description: terraform role
   company: BlackRock
+  description: terraform role
+  galaxy_tags:
+  - terraform
+  - cloud
+  - infrastructure
   license:
-    - MIT
+  - MIT
   min_ansible_version: 1.2
   platforms:
-    - name: EL
-      versions:
-        - all
-    - name: Fedora
-      versions:
-        - all
-    - name: Ubuntu
-      versions:
-        - all
-    - name: Alpine
-      versions:
-        - all
-    - name: Debian
-      versions:
-        - all
-
-  galaxy_tags:
-    - terraform
-    - cloud
-    - infrastructure
-
-dependencies:
-  - src: andrewrothstein.unarchive-deps
-    version: v1.0.10
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+  - name: Ubuntu
+    versions:
+    - all
+  - name: Alpine
+    versions:
+    - all
+  - name: Debian
+    versions:
+    - all
