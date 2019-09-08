@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 APP=terraform
-VER=0.12.7
+VER=0.12.8
 DIR=~/Downloads
 MIRROR=https://releases.hashicorp.com/${APP}/${VER}
 

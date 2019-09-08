@@ -1,5 +1,5 @@
 ---
-terraform_ver: '0.12.7'
+terraform_ver: '0.12.8'
 terraform_platform: linux_amd64
 terraform_mirror: https://releases.hashicorp.com/terraform
 
@@ -329,3 +329,29 @@ terraform_checksums:
     windows_386: sha256:74a566cd857d277bd23b0af890ad91265fed62275813a6d0e67409730930aa57
     # https://releases.hashicorp.com/terraform/0.12.7/terraform_0.12.7_windows_amd64.zip
     windows_amd64: sha256:ce5b0eae0b443cbbb7c592d1b48bad6c8a3c5298932d35a4ebcba800c3488e4e
+  # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_SHA256SUMS
+  '0.12.8':
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_darwin_amd64.zip
+    darwin_amd64: sha256:2c2d9d435712f4be989738b7899917ced7c12ab05b8ddc14359ed4ddb1bc9375
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_freebsd_386.zip
+    freebsd_386: sha256:51212822e93583cbf8a0e1c9492b0a5add8456d45a99592abe207f5d030c4330
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_freebsd_amd64.zip
+    freebsd_amd64: sha256:a6294e2ba470c354bbf5ccf7af5be8536339d2d8f89482537d311774091c596e
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_freebsd_arm.zip
+    freebsd_arm: sha256:f544ee6abe76e5187cdd224549dacc606f4fc75a93bbaaea0c99910cba388b14
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_linux_386.zip
+    linux_386: sha256:93ac24326034eb269d68f2face60bcec5d3af90fc7dfc68b058c66dc5c139e25
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_linux_amd64.zip
+    linux_amd64: sha256:43806e68f7af396449dd4577c6e5cb63c6dc4a253ae233e1dddc46cf423d808b
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_linux_arm.zip
+    linux_arm: sha256:09f47411805f71de0ad83c03fae1e0b8c36d47e23112c32d1767d99d0d2426a2
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_openbsd_386.zip
+    openbsd_386: sha256:52b4861a31002ceaee8638c3847d4158df8a2ee94c9052cb0ad2eb582c98e83b
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_openbsd_amd64.zip
+    openbsd_amd64: sha256:8514a8aca55a713a3986ccc748bc77737da6d30cd136f7cec9d0959cbd465f0f
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_solaris_amd64.zip
+    solaris_amd64: sha256:0f8467d89073b18f50c2415abc2efa4a478f729308010c5a48188e2d4cae9384
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_windows_386.zip
+    windows_386: sha256:c356c4d17e15980c9320cb89c825e3d9867359d4ce91b16504e5ffdb3d0687f4
+    # https://releases.hashicorp.com/terraform/0.12.8/terraform_0.12.8_windows_amd64.zip
+    windows_amd64: sha256:3d0c41c514841ef38645acdefe3f70f8376e7d8de55828c50087083bd34e9c20
