@@ -1,6 +1,6 @@
 dependencies:
 - role: andrewrothstein.unarchive-deps
-  version: v1.1.3
+  version: v1.1.5
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock
@@ -13,18 +13,27 @@ galaxy_info:
   - MIT
   min_ansible_version: 1.2
   platforms:
-  - name: EL
-    versions:
-    - all
-  - name: Fedora
-    versions:
-    - all
-  - name: Ubuntu
-    versions:
-    - all
   - name: Alpine
     versions:
     - all
   - name: Debian
     versions:
+    - buster
+    - stretch
+  - name: EL
+    versions:
+    - 7
+    - 8
+  - name: Fedora
+    versions:
+    - 31
+    - 32
+  - name: Gentoo
+    versions:
     - all
+  - name: Ubuntu
+    versions:
+    - bionic
+    - focal
+    - xenial
+
