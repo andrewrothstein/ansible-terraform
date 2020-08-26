@@ -1,12 +1,15 @@
 ---
 terraform_name: 'terraform_{{ terraform_ver }}'
 terraform_zip: '{{ terraform_name }}_{{ terraform_platform }}.zip'
-terraform_url: '{{terraform_mirror}}/{{terraform_ver}}/{{ terraform_zip }}'
-terraform_binary_dir: '{{terraform_install_dir}}/{{terraform_name}}'
+terraform_url: '{{ terraform_mirror}}/{{terraform_ver}}/{{ terraform_zip }}'
+terraform_binary_dir: '{{terraform_install_dir }}/{{ terraform_name }}'
 terraform_checksums_url: '{{ terraform_mirror }}/{{ terraform_ver }}/{{ terraform_name }}_SHA256SUMS'
 terraform_checksum: |-
   {% if terraform_use_online_checksum %}
   sha256:{{ terraform_checksums_url }}
   {% else %}
-  {{terraform_checksums[terraform_ver][terraform_platform]}}
+  {{ terraform_checksums[terraform_ver][terraform_platform] }}
   {% endif %}
+
+terraform_installed_exe: '{{ terraform_binary_dir }}/terraform'
+terraform_installed_link: '{{ terraform_install_dir }}/terraform'
