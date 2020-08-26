@@ -19,3 +19,8 @@
             solaris_amd64: sha256:8418e0a0d2aea003f35785df796bc3a262e2ffbb80fae75506700faf513ef99b
             windows_386: sha256:87c46cd959732343d2f16becb4e49e9a4d3a1a47708d0e78faacd4d77273db34
             windows_amd64: sha256:b7fdfa2083c49497cd692bece5c240131833d0d0f5011366e7986cd29d5ea559
+  tasks:
+    - command: /usr/local/bin/terraform --version
+      register: terraform_test_output
+    - debug:
+        msg: '{{ terraform_test_output.stdout }}'
