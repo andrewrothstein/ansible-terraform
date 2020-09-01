@@ -1,5 +1,5 @@
 ---
-terraform_ver: 0.13.0
+terraform_ver: 0.13.1
 terraform_platform: linux_amd64
 terraform_mirror: https://releases.hashicorp.com/terraform
 
@@ -849,3 +849,29 @@ terraform_checksums:
     windows_386: sha256:53a8b2162d8a5b77b18472b344af578845983c83eaa910b999ab1cc9186388ac
     # https://releases.hashicorp.com/terraform/0.13.0/terraform_0.13.0_windows_amd64.zip
     windows_amd64: sha256:8af85914d8804c521152167749ca680d7d51447127deb2c7853835b6c62aa9ed
+  # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_SHA256SUMS
+  '0.13.1':
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_darwin_amd64.zip
+    darwin_amd64: sha256:fe5d1b6e22892c5dcc8b44d2a26ea1e29d90af6fcb1472f3881ca3c08c8a8084
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_freebsd_386.zip
+    freebsd_386: sha256:6e32abdbd5d1b5ca9cabff39fed603f00b70eff68797ea76bcea2ea45d4dd314
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_freebsd_amd64.zip
+    freebsd_amd64: sha256:fd556e3ff585c0cefd794783d5d5c05fba5ed793211991c5d98add0c6a4b67ab
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_freebsd_arm.zip
+    freebsd_arm: sha256:b015f1a9cdbbe1df060c62ddb6dffe79d12dda64921cbc95eb59d0ef6715d2e2
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_386.zip
+    linux_386: sha256:9e031e17121f524d8166d6f728ff3ccb64fed82e18d63f431c2fd5deb2707084
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_amd64.zip
+    linux_amd64: sha256:f7b842d1c06045b496fd00db83520e83a974a294b070dbaf88cb1013c5f02caf
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_linux_arm.zip
+    linux_arm: sha256:c15548aa1ec77e968af78c02847672b252145ef7aea1350de9cdbec55fd12924
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_openbsd_386.zip
+    openbsd_386: sha256:e5db1c231ee0abd891d3b0ce737ccce8bd17e9eb2fb98b07d2acc50815ebd3bb
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_openbsd_amd64.zip
+    openbsd_amd64: sha256:8ab1de5f9dcfa97e2b8608ca6ab8b357585bb4273ddc2ff44cb9b818905a6879
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_solaris_amd64.zip
+    solaris_amd64: sha256:d4adbc7427261bb7c052861a96369c19c48878f72e10c9900fc0e26544a4daa6
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_windows_386.zip
+    windows_386: sha256:af1babe4ad7aa2e88fbf12e3ee176846db859617c572f3480de59f9284460457
+    # https://releases.hashicorp.com/terraform/0.13.1/terraform_0.13.1_windows_amd64.zip
+    windows_amd64: sha256:fa7b17147baf4aca478ae83b25c14c1baa064a118a21e0e7b34e3d70e1732b6d
