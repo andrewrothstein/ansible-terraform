@@ -14,6 +14,8 @@ Role Variables
 
 See [defaults/main.yml](defaults/main.yml)
 
+> Note: If terraform_installer is toggled between Homebrew (brew) and tar.gz (tgz) mode, please make sure the executable is re-linked if you want to leverage the Homebrew version: `brew unlink terraform && brew link terraform`
+
 Dependencies
 ------------
 

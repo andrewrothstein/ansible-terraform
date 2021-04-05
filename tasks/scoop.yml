@@ -1,0 +1,5 @@
+---
+- name: install scoop package
+  win_scoop:
+    name: terraform
+    state: present

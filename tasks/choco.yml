@@ -1,0 +1,6 @@
+---
+- name: install chocolatey package
+  win_chocolatey:
+    name: terraform
+    version: '{{ terraform_chocolatey_latest_only | ternary(omit, terraform_ver) }}'
+    state: '{{ terraform_chocolatey_latest_only | ternary("latest", "present") }}'

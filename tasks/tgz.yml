@@ -1,0 +1,47 @@
+---
+- name: check for installation
+  become: yes
+  stat:
+    path: '{{ terraform_binary_dir }}'
+  changed_when: False
+  register: terraform_binary
+- when: not terraform_binary.stat.exists
+  block:
+    - name: downloading {{ terraform_url }}...
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ terraform_url }}'
+        dest: /tmp/{{ terraform_zip }}
+        checksum: '{{ terraform_checksum }}'
+        mode: 0644
+    - name: mkdir {{ terraform_binary_dir }}
+      become: yes
+      become_user: root
+      file:
+        path: '{{ terraform_binary_dir }}'
+        state: directory
+        mode: 0755
+    - name: unarchive /tmp/{{ terraform_zip }} to {{ terraform_binary_dir }}
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{ terraform_zip }}
+        dest: '{{ terraform_binary_dir }}'
+        creates: '{{ terraform_installed_exe }}'
+  always:
+    - name: rm /tmp/{{ terraform_zip }}
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{ terraform_zip }}
+        state: absent
+- name: link {{ terraform_installed_exe }} to {{ terraform_installed_link }}
+  become: yes
+  become_user: root
+  file:
+    src: '{{ terraform_installed_exe }}'
+    dest: '{{ terraform_installed_link }}'
+    state: link
+    force: '{{ terraform_force_install }}'
