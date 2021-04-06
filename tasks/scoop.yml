@@ -1,5 +1,5 @@
 ---
 - name: install scoop package
-  win_scoop:
+  community.windows.win_scoop:
     name: terraform
     state: present
