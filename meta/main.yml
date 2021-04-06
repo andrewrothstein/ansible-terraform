@@ -1,6 +1,8 @@
 dependencies:
 - role: andrewrothstein.unarchive-deps
-  version: v1.1.5
+  scm: git
+  src: https://github.com/vmichel95/ansible-unarchive-deps.git
+  version: feature/Adding-Windows-Unzip-Module-Requirements-Support
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock
