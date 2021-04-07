@@ -10,9 +10,4 @@
       paths:
         - '{{ role_path }}/vars'
 
-- include_tasks: |-
-    {% if terraform_installer is undefined %}
-    {{ (ansible_os_family == "Windows") | ternary("win_tgz", "tgz") }}
-    {% else %}
-    {{ terraform_installer }}
-    {% endif %}.yml
+- include_tasks: '{{ terraform_installer }}.yml'
