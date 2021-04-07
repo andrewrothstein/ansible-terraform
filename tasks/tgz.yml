@@ -1,6 +1,7 @@
 ---
 - name: check for installation
-  become: yes
+  become: '{{ terraform_privilege_escalate }}'
+  become_user: root
   stat:
     path: '{{ terraform_binary_dir }}'
   changed_when: False
@@ -8,7 +9,7 @@
 - when: not terraform_binary.stat.exists
   block:
     - name: downloading {{ terraform_url }}...
-      become: yes
+      become: '{{ terraform_privilege_escalate }}'
       become_user: root
       get_url:
         url: '{{ terraform_url }}'
@@ -16,14 +17,14 @@
         checksum: '{{ terraform_checksum }}'
         mode: 0644
     - name: mkdir {{ terraform_binary_dir }}
-      become: yes
+      become: '{{ terraform_privilege_escalate }}'
       become_user: root
       file:
         path: '{{ terraform_binary_dir }}'
         state: directory
         mode: 0755
     - name: unarchive {{ terraform_temp_exe }} to {{ terraform_binary_dir }}
-      become: yes
+      become: '{{ terraform_privilege_escalate }}'
       become_user: root
       unarchive:
         remote_src: yes
@@ -32,13 +33,13 @@
         creates: '{{ terraform_installed_exe }}'
   always:
     - name: rm {{ terraform_temp_exe }}
-      become: yes
+      become: '{{ terraform_privilege_escalate }}'
       become_user: root
       file:
         path: '{{ terraform_temp_exe }}'
         state: absent
 - name: link {{ terraform_installed_exe }} to {{ terraform_installed_link }}
-  become: yes
+  become: '{{ terraform_privilege_escalate }}'
   become_user: root
   file:
     src: '{{ terraform_installed_exe }}'

@@ -7,6 +7,7 @@ terraform_installer: '{{ (ansible_os_family == "Windows") | ternary("win_tgz", "
 terraform_install_dir: /usr/local/bin
 terraform_temp_dir: /tmp
 
+terraform_privilege_escalate: true
 terraform_force_install: false  # Force-replace /usr/local/bin/terraform with symlink.
 terraform_use_online_checksum: false  # when it's true, requires ansible 2.8+
 
