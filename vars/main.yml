@@ -1,5 +1,5 @@
 ---
-terraform_path_join: '{{ ansible_os_family == "Windows" | ternary("\", "/") }}'
+terraform_path_join: '{{ (ansible_os_family == "Windows") | ternary("\\", "/") }}'
 terraform_name: 'terraform_{{ terraform_ver }}'
 terraform_zip: '{{ terraform_name }}_{{ terraform_platform }}.zip'
 terraform_url: '{{ [terraform_mirror, terraform_ver, terraform_zip] | join(terraform_path_join) }}'
@@ -11,6 +11,6 @@ terraform_checksum: |-
   {% else %}
   {{ terraform_checksums[terraform_ver][terraform_platform] }}
   {% endif %}
-
+terraform_temp_exe: '{{ [terraform_temp_dir, terraform_zip] | join(terraform_path_join)  }}'
 terraform_installed_exe: '{{ [terraform_binary_dir, "terraform"] | join(terraform_path_join) }}'
 terraform_installed_link: '{{ [terraform_install_dir, "terraform"] | join(terraform_path_join) }}'

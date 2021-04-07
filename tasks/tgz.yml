@@ -12,7 +12,7 @@
       become_user: root
       get_url:
         url: '{{ terraform_url }}'
-        dest: '{{ [terraform_temp_dir, terraform_zip] | join(terraform_path_join)  }}'
+        dest: '{{ terraform_temp_exe }}'
         checksum: '{{ terraform_checksum }}'
         mode: 0644
     - name: mkdir {{ terraform_binary_dir }}
@@ -22,20 +22,20 @@
         path: '{{ terraform_binary_dir }}'
         state: directory
         mode: 0755
-    - name: unarchive {{ [terraform_temp_dir, terraform_zip] | join(terraform_path_join) }} to {{ terraform_binary_dir }}
+    - name: unarchive {{ terraform_temp_exe }} to {{ terraform_binary_dir }}
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: '{{ [terraform_temp_dir, terraform_zip] | join(terraform_path_join) }}'
+        src: '{{ terraform_temp_exe }}'
         dest: '{{ terraform_binary_dir }}'
         creates: '{{ terraform_installed_exe }}'
   always:
-    - name: rm /tmp/{{ terraform_zip }}
+    - name: rm {{ terraform_temp_exe }}
       become: yes
       become_user: root
       file:
-        path: '{{ [terraform_temp_dir, terraform_zip] | join(terraform_path_join) }}'
+        path: '{{ terraform_temp_exe }}'
         state: absent
 - name: link {{ terraform_installed_exe }} to {{ terraform_installed_link }}
   become: yes
