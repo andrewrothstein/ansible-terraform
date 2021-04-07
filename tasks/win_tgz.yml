@@ -14,7 +14,8 @@
       win_get_url:
         url: '{{ terraform_url }}'
         dest: '{{ terraform_temp_exe }}'
-        checksum: '{{ terraform_checksum.split(":")[1] }}'
+        checksum: '{{ terraform_use_online_checksum | ternary(omit, terraform_checksum.split(":")[1]) }}'
+        checksum_url: '{{ terraform_use_online_checksum | ternary(terraform_checksums_url, omit) }}'
         checksum_algorithm: '{{ terraform_checksum.split(":")[0] }}'
     - name: mkdir {{ terraform_binary_dir }}
       become: '{{ terraform_privilege_escalate }}'
@@ -41,5 +42,5 @@
   become: '{{ terraform_privilege_escalate }}'
   become_user: '{{ terraform_privilege_escalation_user }}'
   win_path:
-    elements: '{{ terraform_installed_exe }}'
+    elements: '{{ terraform_binary_dir }}'
     state: present
