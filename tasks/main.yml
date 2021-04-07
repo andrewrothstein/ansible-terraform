@@ -10,4 +10,4 @@
       paths:
         - '{{ role_path }}/vars'
 
-- include_tasks: '{{ terraform_installer | default("tgz") }}.yml'
+# - include_tasks: '{{ terraform_installer | default("tgz") }}.yml'
