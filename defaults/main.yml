@@ -1,6 +1,6 @@
 ---
 terraform_ver: 0.14.9
-terraform_platform: linux_amd64
+terraform_platform: '{{ (ansible_os_family == "Windows") | ternary("linux_amd64", "windows_amd64") }}'
 terraform_mirror: https://releases.hashicorp.com/terraform
 
 terraform_installer: '{{ (ansible_os_family == "Windows") | ternary("win_tgz", "tgz") }}'
