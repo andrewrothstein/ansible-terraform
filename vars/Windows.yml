@@ -1,3 +1,4 @@
 ---
+terraform_platform: windows_amd64
 terraform_install_dir: 'C:\Program Files{% if terraform_platform == "windows_386" %} (x86){% endif %}'
 terraform_temp_dir: C:\Windows\Temp
