@@ -38,9 +38,9 @@
       win_file:
         path: '{{ terraform_temp_exe }}'
         state: absent
-- name: export {{ terraform_installed_exe }} to PATH
+- name: export {{ terraform_binary_dir }} to PATH
   become: '{{ terraform_privilege_escalate }}'
   become_user: '{{ terraform_privilege_escalation_user }}'
   win_path:
-    elements: '{{ terraform_binary_dir }}'
+    elements: '{{ terraform_binary_dir | regex_replace("/", "\\") }}'
     state: present
