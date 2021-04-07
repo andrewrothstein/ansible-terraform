@@ -1,5 +1,7 @@
 ---
 - name: install scoop package
+  become: '{{ terraform_privilege_escalate }}'
+  become_user: '{{ terraform_privilege_escalation_user }}'
   community.windows.win_scoop:
     name: terraform
     state: present

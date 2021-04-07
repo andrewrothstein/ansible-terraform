@@ -38,5 +38,8 @@
         path: '{{ terraform_temp_exe }}'
         state: absent
 - name: export {{ terraform_installed_exe }} to PATH
-  debug:
-    msg: '{{ terraform_installed_exe }}'
+  become: '{{ terraform_privilege_escalate }}'
+  become_user: '{{ terraform_privilege_escalation_user }}'
+  win_path:
+    elements: '{{ terraform_installed_exe }}'
+    state: present

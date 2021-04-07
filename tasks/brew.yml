@@ -1,5 +1,7 @@
 ---
 - name: install brew package
+  become: '{{ terraform_privilege_escalate }}'
+  become_user: '{{ terraform_privilege_escalation_user }}'
   homebrew:
     name: terraform
     state: present
