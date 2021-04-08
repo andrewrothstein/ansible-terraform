@@ -1,0 +1,9 @@
+---
+- name: install chocolatey package
+  become: '{{ terraform_privilege_escalate }}'
+  become_user: '{{ terraform_privilege_escalation_user }}'
+  win_chocolatey:
+    name: terraform
+    version: '{{ terraform_chocolatey_latest_only | ternary(omit, terraform_ver) }}'
+    allow_multiple: yes
+    state: '{{ terraform_chocolatey_latest_only | ternary("latest", "present") }}'

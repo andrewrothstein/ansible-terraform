@@ -1,0 +1,46 @@
+---
+- name: check for installation
+  become: '{{ terraform_privilege_escalate }}'
+  become_user: '{{ terraform_privilege_escalation_user }}'
+  win_stat:
+    path: '{{ terraform_binary_dir }}'
+  changed_when: False
+  register: terraform_binary
+- when: not terraform_binary.stat.exists
+  block:
+    - name: downloading {{ terraform_url }}...
+      become: '{{ terraform_privilege_escalate }}'
+      become_user: '{{ terraform_privilege_escalation_user }}'
+      win_get_url:
+        url: '{{ terraform_url }}'
+        dest: '{{ terraform_temp_exe }}'
+        checksum: '{{ terraform_use_online_checksum | ternary(omit, terraform_checksum.split(":")[1]) }}'
+        checksum_url: '{{ terraform_use_online_checksum | ternary(terraform_checksums_url, omit) }}'
+        checksum_algorithm: '{{ terraform_checksum.split(":")[0] }}'
+    - name: mkdir {{ terraform_binary_dir }}
+      become: '{{ terraform_privilege_escalate }}'
+      become_user: '{{ terraform_privilege_escalation_user }}'
+      win_file:
+        path: '{{ terraform_binary_dir }}'
+        state: directory
+    - name: unarchive {{ terraform_temp_exe }} to {{ terraform_binary_dir }}
+      become: '{{ terraform_privilege_escalate }}'
+      become_user: '{{ terraform_privilege_escalation_user }}'
+      win_unzip:
+        remote_src: yes
+        src: '{{ terraform_temp_exe }}'
+        dest: '{{ terraform_binary_dir }}'
+        creates: '{{ terraform_installed_exe }}'
+  always:
+    - name: delete {{ terraform_temp_exe }}
+      become: '{{ terraform_privilege_escalate }}'
+      become_user: '{{ terraform_privilege_escalation_user }}'
+      win_file:
+        path: '{{ terraform_temp_exe }}'
+        state: absent
+- name: export {{ terraform_binary_dir }} to PATH
+  become: '{{ terraform_privilege_escalate }}'
+  become_user: '{{ terraform_privilege_escalation_user }}'
+  win_path:
+    elements: '{{ terraform_binary_dir | regex_replace("/", "\\") }}'
+    state: present
