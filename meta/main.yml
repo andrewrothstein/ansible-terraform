@@ -23,17 +23,14 @@ galaxy_info:
     versions:
     - bullseye
     - buster
-    - stretch
   - name: EL
     versions:
-    - 7
     - 8
   - name: Fedora
     versions:
-    - 31
-    - 32
+    - 34
+    - 35
   - name: Ubuntu
     versions:
     - bionic
     - focal
-    - xenial
