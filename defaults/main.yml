@@ -1279,6 +1279,32 @@ terraform_checksums:
     windows_386: sha256:c73fd3ff67f535ca2d1192484281bc22edc209938a2592db9660e0ffa95932d5
     # https://releases.hashicorp.com/terraform/0.14.10/terraform_0.14.10_windows_amd64.zip
     windows_amd64: sha256:6b40c552cdc91af4b9aa854f6e8e41d9fcc6b549f4cef1df6c1b9d1a6c7d0535
+  # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_SHA256SUMS
+  '0.14.11':
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_darwin_amd64.zip
+    darwin_amd64: sha256:5c0110a4dc44ec01edd159c69bf60cebd18540eaf168aacd8b37d828b70e265d
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_freebsd_386.zip
+    freebsd_386: sha256:43811b7d91efcac9410f367a97edd379ab85bedacf963b7591e4de8c60fd3b82
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_freebsd_amd64.zip
+    freebsd_amd64: sha256:8a4eabb258bed10f7a8abd9f5cff4a028dabbc413e21c3b09149f4679f524c69
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_freebsd_arm.zip
+    freebsd_arm: sha256:2d793cf8fe4751e2c7dcaba70195ac7968a44f49787770f155db9fa922780e02
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_linux_386.zip
+    linux_386: sha256:27aa3d1aacaa1aa64ed743b44995b47e3eebe2ded14b221f4dee9f98dd8350ff
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_linux_amd64.zip
+    linux_amd64: sha256:171ef5a4691b6f86eab524feaf9a52d5221c875478bd63dd7e55fef3939f7fd4
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_linux_arm.zip
+    linux_arm: sha256:4f9f628e58998f50d8c8bc96b4f8feb3bf13fc7ae54c47c234526ee48f7514d9
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_openbsd_386.zip
+    openbsd_386: sha256:00a83c4f0282ef761962b93a5e42ab3a40720999be75a38421514088272f61e0
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_openbsd_amd64.zip
+    openbsd_amd64: sha256:a29cea17067fb3b29f5b3a411e22901210b8a2a71d23452d5733d317ffdd0e6e
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_solaris_amd64.zip
+    solaris_amd64: sha256:33fdfa45b0be5191e5eae7bf1367b988a148a71d42bbe1ed6daef827bbf1ebc4
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_windows_386.zip
+    windows_386: sha256:e91e106a0c5ba1c3d98fbf23a18305be0ebceda4112d7d682c370b582225c8d2
+    # https://releases.hashicorp.com/terraform/0.14.11/terraform_0.14.11_windows_amd64.zip
+    windows_amd64: sha256:acec7890c57074ab9d74bbb19076bcd3b6a11266bb19f6bc6298ca6900c5a4c0
   # https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_SHA256SUMS
   '0.15.0':
     # https://releases.hashicorp.com/terraform/0.15.0/terraform_0.15.0_darwin_amd64.zip
