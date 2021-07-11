@@ -29,7 +29,6 @@ galaxy_info:
   - name: Fedora
     versions:
     - 34
-    - 35
   - name: Ubuntu
     versions:
     - bionic

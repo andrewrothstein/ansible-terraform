@@ -1,6 +1,6 @@
 andrewrothstein.terraform
 ===========================
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-terraform.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-terraform)
+![Build Status](https://github.com/andrewrothstein/ansible-terraform/actions/workflows/build.yml/badge.svg)
 
 Installs [Terraform](https://www.terraform.io/)
 
