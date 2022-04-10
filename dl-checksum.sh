@@ -25,7 +25,7 @@ dl_all () {
 
     if [ ! -e $lchecksums ];
     then
-        wget -q -O $lchecksums $rchecksums
+        curl -sSLf -o $lchecksums $rchecksums
     fi
 
     printf "  # %s\n" $rchecksums
@@ -44,4 +44,4 @@ dl_all () {
     dl $ver $lchecksums windows amd64
 }
 
-dl_all  ${1:-1.1.7}
+dl_all  ${1:-1.1.8}
