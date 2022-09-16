@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
 - name: check for installation in {{ terraform_binary_dir }}
   become: yes
   stat:
