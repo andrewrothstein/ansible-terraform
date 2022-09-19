@@ -1,12 +1,18 @@
 ---
 terraform_ver: 1.2.9
-terraform_platform: linux_amd64
+terraform_arch_map:
+  386: 386
+  x86_64: amd64
+  aarch64: arm64
 terraform_mirror: https://releases.hashicorp.com/terraform
 
 terraform_install_dir: /usr/local/bin
 
-terraform_force_install: false  # Force-replace /usr/local/bin/terraform with symlink.
-terraform_use_online_checksum: false  # when it's true, requires ansible 2.8+
+# Force-replace /usr/local/bin/terraform with symlink.
+terraform_force_install: false
+
+# when it's true, requires ansible 2.8+
+terraform_use_online_checksum: false
 
 terraform_checksums:
   # https://releases.hashicorp.com/terraform/0.11.0/terraform_0.11.0_SHA256SUMS

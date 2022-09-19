@@ -1,4 +1,7 @@
 ---
+terraform_os: '{{ ansible_system | lower }}'
+terraform_arch: '{{ terraform_arch_map[ansible_architecture] }}'
+terraform_platform: '{{ terraform_os }}_{{ terraform_arch }}'
 terraform_name: 'terraform_{{ terraform_ver }}'
 terraform_zip: '{{ terraform_name }}_{{ terraform_platform }}.zip'
 terraform_tmp_zip: /tmp/{{ terraform_zip }}
