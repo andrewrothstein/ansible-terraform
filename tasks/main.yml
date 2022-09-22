@@ -2,7 +2,7 @@
 - include_role:
     name: andrewrothstein.unarchive-deps
 - name: check for installation in {{ terraform_binary_dir }}
-  become: yes
+  become: true
   stat:
     path: '{{ terraform_binary_dir }}'
   changed_when: False
@@ -10,7 +10,7 @@
 - when: not terraform_binary.stat.exists
   block:
     - name: downloading {{ terraform_url }}...
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ terraform_url }}'
@@ -18,29 +18,29 @@
         checksum: '{{ terraform_checksum }}'
         mode: 0644
     - name: mkdir {{ terraform_binary_dir }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ terraform_binary_dir }}'
         state: directory
         mode: 0755
     - name: unarchive {{ terraform_tmp_zip }} to {{ terraform_binary_dir }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ terraform_tmp_zip }}'
         dest: '{{ terraform_binary_dir }}'
         creates: '{{ terraform_installed_exe }}'
   always:
     - name: rm {{ terraform_tmp_zip }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ terraform_tmp_zip }}'
         state: absent
 - name: link {{ terraform_installed_exe }} to {{ terraform_installed_link }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ terraform_installed_exe }}'
