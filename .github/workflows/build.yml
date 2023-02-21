@@ -32,7 +32,6 @@ jobs:
         - fedora_37
         - rockylinux_8
         - rockylinux_9
-        - ubuntu_bionic
         - ubuntu_focal
         - ubuntu_jammy
         python-version:
