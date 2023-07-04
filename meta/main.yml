@@ -33,4 +33,4 @@ galaxy_info:
     versions:
     - focal
     - jammy
-  rolename: terraform
+  role_name: terraform
