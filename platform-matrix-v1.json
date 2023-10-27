@@ -1,0 +1,50 @@
+[
+  {
+    "OS": "alpine",
+    "OS_VER": "3.17"
+  },
+  {
+    "OS": "alpine",
+    "OS_VER": "3.18"
+  },
+  {
+    "OS": "alpine",
+    "OS_VER": "edge"
+  },
+  {
+    "OS": "archlinux",
+    "OS_VER": "latest"
+  },
+  {
+    "OS": "debian",
+    "OS_VER": "bookworm"
+  },
+  {
+    "OS": "debian",
+    "OS_VER": "bullseye"
+  },
+  {
+    "OS": "fedora",
+    "OS_VER": "37"
+  },
+  {
+    "OS": "fedora",
+    "OS_VER": "38"
+  },
+  {
+    "OS": "rockylinux",
+    "OS_VER": "8"
+  },
+  {
+    "OS": "rockylinux",
+    "OS_VER": "9"
+  },
+  {
+    "OS": "ubuntu",
+    "OS_VER": "focal"
+  },
+  {
+    "OS": "ubuntu",
+    "OS_VER": "jammy"
+  }
+]
