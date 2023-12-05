@@ -4,33 +4,32 @@ galaxy_info:
   company: BlackRock
   description: terraform role
   galaxy_tags:
-  - terraform
-  - cloud
-  - infrastructure
-  license:
-  - MIT
+    - terraform
+    - cloud
+    - infrastructure
+  license: MIT
   min_ansible_version: 1.2
   platforms:
-  - name: Alpine
-    versions:
-    - all
-  - name: Archlinux
-    versions:
-    - all
-  - name: Debian
-    versions:
-    - bookworm
-    - bullseye
-  - name: EL
-    versions:
-    - 8
-    - 9
-  - name: Fedora
-    versions:
-    - 37
-    - 38
-  - name: Ubuntu
-    versions:
-    - focal
-    - jammy
+    - name: Alpine
+      versions:
+        - all
+    - name: Archlinux
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - bookworm
+        - bullseye
+    - name: EL
+      versions:
+        - 8
+        - 9
+    - name: Fedora
+      versions:
+        - 38
+        - 39
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy
   role_name: terraform
