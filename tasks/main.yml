@@ -1,6 +1,6 @@
 ---
-- name: installing terraform binaries
-  include_role:
+- name: Installing terraform binaries
+  ansible.builtin.include_role:
     name: andrewrothstein.hashi
   vars:
     hashi_apps:
