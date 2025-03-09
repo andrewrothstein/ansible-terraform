@@ -3,3 +3,4 @@ Dockerfile.*
 requirements.yml
 !meta/requirements.yml
 **/*undo-tree*
+.ansible
