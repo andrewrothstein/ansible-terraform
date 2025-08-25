@@ -1,11 +1,11 @@
 [
   {
     "OS": "alpine",
-    "OS_VER": "3.20"
+    "OS_VER": "3.21"
   },
   {
     "OS": "alpine",
-    "OS_VER": "3.21"
+    "OS_VER": "3.22"
   },
   {
     "OS": "alpine",
@@ -25,11 +25,11 @@
   },
   {
     "OS": "fedora",
-    "OS_VER": "40"
+    "OS_VER": "41"
   },
   {
     "OS": "fedora",
-    "OS_VER": "41"
+    "OS_VER": "42"
   },
   {
     "OS": "rockylinux",
