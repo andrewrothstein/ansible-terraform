@@ -1,0 +1,7 @@
+name: Test Ansible Role
+on: [push, pull_request]
+
+jobs:
+  test:
+    uses: andrewrothstein/docker-ansible/.github/workflows/dagger-ansible-test-role.yml@develop
+    secrets: inherit
