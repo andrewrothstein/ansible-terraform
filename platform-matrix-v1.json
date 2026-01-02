@@ -1,50 +1,77 @@
 [
   {
     "OS": "alpine",
-    "OS_VER": "3.21"
+    "OS_VER": "3.22",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "alpine",
-    "OS_VER": "3.22"
+    "OS_VER": "3.23",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "alpine",
-    "OS_VER": "edge"
+    "OS_VER": "edge",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "archlinux",
-    "OS_VER": "latest"
+    "OS_VER": "latest",
+    "platforms": "linux/amd64"
   },
   {
     "OS": "debian",
-    "OS_VER": "bookworm"
+    "OS_VER": "bookworm",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "debian",
-    "OS_VER": "bullseye"
+    "OS_VER": "trixie",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "fedora",
-    "OS_VER": "41"
+    "OS_VER": "43",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "fedora",
-    "OS_VER": "42"
+    "OS_VER": "44",
+    "platforms": "linux/amd64,linux/arm64"
+  },
+  {
+    "OS": "kali",
+    "OS_VER": "latest",
+    "platforms": "linux/amd64"
   },
   {
     "OS": "rockylinux",
-    "OS_VER": "8"
+    "OS_VER": "9",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "rockylinux",
-    "OS_VER": "9"
+    "OS_VER": "10",
+    "platforms": "linux/amd64,linux/arm64"
+  },
+  {
+    "OS": "ubi",
+    "OS_VER": "9",
+    "platforms": "linux/amd64,linux/arm64"
+  },
+  {
+    "OS": "ubi",
+    "OS_VER": "10",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "ubuntu",
-    "OS_VER": "jammy"
+    "OS_VER": "jammy",
+    "platforms": "linux/amd64,linux/arm64"
   },
   {
     "OS": "ubuntu",
-    "OS_VER": "noble"
+    "OS_VER": "noble",
+    "platforms": "linux/amd64,linux/arm64"
   }
 ]
